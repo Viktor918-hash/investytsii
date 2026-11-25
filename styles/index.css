@@ -1,0 +1,137 @@
+/* ===== Тема «Інвестиції»: темно-синій фон, сітка біржового графіка, золото й зелень ===== */
+
+.slidev-layout {
+  position: relative;
+  isolation: isolate;
+  color: #e8eefc;
+  background:
+    radial-gradient(ellipse 60% 50% at 88% 8%, rgba(34, 197, 94, 0.16), transparent 70%),
+    radial-gradient(ellipse 55% 45% at 6% 100%, rgba(250, 204, 21, 0.10), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 44px 44px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 44px 44px,
+    linear-gradient(160deg, #0b1730 0%, #08111f 100%) !important;
+}
+
+/* ледь помітна «біржова» крива внизу кожного слайда */
+.slidev-layout::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 38%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.09;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 200' preserveAspectRatio='none'%3E%3Cpath d='M0 180 L80 160 L140 170 L220 130 L280 145 L360 100 L420 115 L500 80 L560 95 L640 55 L700 70 L780 35 L860 45 L940 15 L1000 20' fill='none' stroke='%2322c55e' stroke-width='4'/%3E%3Cpath d='M0 180 L80 160 L140 170 L220 130 L280 145 L360 100 L420 115 L500 80 L560 95 L640 55 L700 70 L780 35 L860 45 L940 15 L1000 20 L1000 200 L0 200 Z' fill='%2322c55e' fill-opacity='.35'/%3E%3C/svg%3E") no-repeat bottom / 100% 100%;
+}
+
+.slidev-layout h1 {
+  font-weight: 800;
+  font-size: 2.1rem;
+  margin-bottom: 0.6rem;
+  background: linear-gradient(90deg, #fde68a, #facc15 40%, #4ade80);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.slidev-layout h1 + p { opacity: 0.85; }
+.slidev-layout b, .slidev-layout strong { color: #fde68a; }
+
+/* ===== Обкладинка ===== */
+.cover-invest h1 {
+  font-size: 3.6rem !important;
+  line-height: 1.1;
+}
+.cover-sub {
+  font-size: 1.6rem;
+  color: #e8eefc;
+  opacity: 0.9;
+}
+.cover-tag {
+  display: inline-block;
+  margin-top: 1.6rem;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(250, 204, 21, 0.5);
+  color: #fde68a;
+  font-size: 0.95rem;
+}
+
+/* ===== Картки ===== */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #facc15;
+  margin-bottom: 6px;
+}
+.card ul { margin: 0; padding-left: 1.1rem; font-size: 0.86rem; }
+.card li { margin: 2px 0; }
+
+.asset-card {
+  text-align: center;
+  font-size: 0.95rem;
+  padding: 18px 10px;
+}
+.asset-card .ic { font-size: 2.4rem; display: block; margin-bottom: 6px; }
+
+/* ===== Слайди активів ===== */
+.asset-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+.desc {
+  font-size: 0.92rem;
+  line-height: 1.45;
+  margin: 0 0 10px !important;
+}
+.pros, .cons {
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+}
+.pros { background: rgba(34, 197, 94, 0.1); border-left: 4px solid #22c55e; }
+.cons { background: rgba(239, 68, 68, 0.1); border-left: 4px solid #ef4444; }
+.pros b, .cons b { color: inherit; }
+.pros ul, .cons ul { margin: 4px 0 0; padding-left: 1.1rem; }
+.pros li, .cons li { margin: 1px 0; }
+
+/* ===== Таблиці ===== */
+.slidev-layout table { font-size: 0.8rem; }
+.slidev-layout th { color: #facc15; }
+.slidev-layout td, .slidev-layout th { padding: 5px 10px !important; border-color: rgba(255, 255, 255, 0.1) !important; }
+
+/* ===== Різне ===== */
+.warn-box {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+.gold-box {
+  background: rgba(250, 204, 21, 0.08);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+.answer { margin-top: 2px; color: #4ade80; font-weight: 600; }
+.risk-bar {
+  height: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22c55e, #facc15, #ef4444);
+}
+.muted { opacity: 0.6; }
+
+.rules { font-size: 1.25rem; }
+.rules li { margin: 0.7rem 0; }
+.quiz { font-size: 1.15rem; }
+.quiz .answer { font-size: 1.05rem; }
+.pit table { font-size: 0.95rem; }
+.pit td, .pit th { padding: 8px 12px !important; }

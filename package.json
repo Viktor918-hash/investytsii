@@ -1,0 +1,17 @@
+{
+  "name": "investytsii",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "dev:vibe": "slidev vibe/slides.md --open",
+    "build": "slidev build --base /investytsii/ && slidev build vibe/slides.md --base /investytsii/vibe/ --out ../dist/vibe",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^53.1.0",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-vibe": "^1.0.1",
+    "vue": "^3.5.0"
+  }
+}

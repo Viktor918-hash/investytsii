@@ -1,0 +1,129 @@
+/* ===== Інвестиції × Vibe: темний фінтех, матове скло, неон ===== */
+
+:root {
+  --neon: #00ff9d;
+  --neon-cyan: #22d3ee;
+  --neon-red: #ff4d6d;
+  --glass: rgba(30, 34, 39, 0.6);
+  --glass-border: rgba(0, 255, 157, 0.16);
+}
+
+/* фон: темний графіт + неонове світіння + сітка терміналу */
+.slidev-layout {
+  padding: 2rem 3rem !important;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse 55% 45% at 92% 0%, rgba(0, 255, 157, 0.13), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(34, 211, 238, 0.09), transparent 70%),
+    linear-gradient(rgba(0, 255, 157, 0.04) 1px, transparent 1px) 0 0 / 60px 60px,
+    linear-gradient(90deg, rgba(0, 255, 157, 0.04) 1px, transparent 1px) 0 0 / 60px 60px,
+    #121417 !important;
+}
+
+/* кирилиця: Space Grotesk її не має, тому Unbounded + Manrope */
+.slidev-layout { font-family: 'Manrope', system-ui, sans-serif !important; }
+.slidev-layout h1, .slidev-layout h2, .slidev-layout h3 { font-family: 'Unbounded', 'Manrope', sans-serif !important; }
+
+.slidev-layout h1 {
+  font-size: 1.75rem !important;
+  letter-spacing: 0.02em !important;
+  margin-bottom: 1rem !important;
+  text-transform: none;
+  filter: drop-shadow(0 0 14px rgba(0, 255, 157, 0.25));
+}
+.slidev-layout p, .slidev-layout li { font-size: inherit; line-height: 1.5; }
+.slidev-layout ul > li, .slidev-layout ol > li { margin-bottom: 0.15rem; }
+.slidev-layout b, .slidev-layout strong { color: #fff; }
+
+/* ===== Обкладинка ===== */
+.slidev-layout.cover .cover-content { max-width: 92%; }
+.slidev-layout.cover h1 {
+  font-size: 2.6rem !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0.03em !important;
+  margin-bottom: 1.2rem !important;
+}
+.cover-sub { font-size: 1.15rem; color: #8a8f98; letter-spacing: 0.08em; }
+.cover-tag {
+  display: inline-block;
+  margin-top: 1.6rem;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 255, 157, 0.45);
+  color: var(--neon);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 0 18px rgba(0, 255, 157, 0.18);
+}
+.ticker {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-bottom: 1.6rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+.ticker span { padding: 3px 10px; border-radius: 6px; background: rgba(30, 34, 39, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); }
+.ticker .up { color: var(--neon); }
+.ticker .dn { color: var(--neon-red); }
+
+/* ===== Скляні картки ===== */
+.card, .gold-box, .warn-box {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: border-color 250ms ease, box-shadow 250ms ease;
+}
+.card:hover { border-color: rgba(0, 255, 157, 0.35); box-shadow: 0 0 20px rgba(0, 255, 157, 0.15); }
+.gold-box { border-color: rgba(0, 255, 157, 0.4); box-shadow: 0 0 22px rgba(0, 255, 157, 0.12); }
+.warn-box { border-color: rgba(255, 77, 109, 0.45); box-shadow: 0 0 22px rgba(255, 77, 109, 0.12); }
+.card h3 { font-size: 0.95rem !important; color: var(--neon) !important; margin-bottom: 6px; }
+.card ul { margin: 0; padding-left: 1.1rem; font-size: 0.84rem; }
+
+.asset-card { text-align: center; font-size: 0.9rem; padding: 18px 10px; }
+.asset-card .ic { font-size: 2.3rem; display: block; margin-bottom: 6px; filter: drop-shadow(0 0 10px rgba(0, 255, 157, 0.35)); }
+
+/* ===== Слайди активів ===== */
+.asset-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 1.4rem; align-items: start; }
+.desc { font-size: 0.9rem; line-height: 1.5; margin: 0 0 10px !important; color: #e0e0e0; }
+.pros, .cons {
+  background: var(--glass);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+.pros { border: 1px solid rgba(0, 255, 157, 0.3); box-shadow: inset 3px 0 0 var(--neon); }
+.cons { border: 1px solid rgba(255, 77, 109, 0.3); box-shadow: inset 3px 0 0 var(--neon-red); }
+.pros > b { color: var(--neon); }
+.cons > b { color: var(--neon-red); }
+.pros ul, .cons ul { margin: 4px 0 0; padding-left: 1.1rem; }
+.cons li::marker { color: var(--neon-red) !important; }
+
+/* ===== Таблиці ===== */
+.slidev-layout table { font-size: 0.8rem; }
+.slidev-layout th { color: var(--neon) !important; }
+.slidev-layout td, .slidev-layout th { padding: 5px 10px !important; }
+.pit table { font-size: 0.92rem; }
+.pit td, .pit th { padding: 8px 12px !important; }
+
+/* ===== Різне ===== */
+.rules { font-size: 1.2rem; }
+.rules li { margin: 0.65rem 0 !important; }
+.quiz { font-size: 1.1rem; }
+.answer { margin-top: 2px; color: var(--neon); font-weight: 600; text-shadow: 0 0 12px rgba(0, 255, 157, 0.35); }
+.risk-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #00ff9d, #ffe14d, #ff4d6d);
+  box-shadow: 0 0 16px rgba(0, 255, 157, 0.25);
+}
+.muted { opacity: 0.6; }
+
+/* центр-слайди ширші, ніж у темі за замовчуванням */
+.slidev-layout.center .center-content { max-width: 96% !important; width: 96%; }
+.slidev-layout.center h1 { font-size: 2.2rem !important; }
