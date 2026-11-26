@@ -25,7 +25,7 @@ jobs:
           cache: npm
       - run: npm install
       - run: npm run build
-      - run: cp dist/index.html dist/404.html && cp dist/vibe/index.html dist/vibe/404.html
+      - run: for d in dist dist/8 dist/vibe dist/vibe/8; do cp $d/index.html $d/404.html; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

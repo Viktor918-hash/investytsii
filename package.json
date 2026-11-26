@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "slidev --open",
     "dev:vibe": "slidev vibe/slides.md --open",
-    "build": "slidev build --base /investytsii/ && slidev build vibe/slides.md --base /investytsii/vibe/ --out ../dist/vibe",
-    "export": "slidev export"
+    "build": "slidev build --base /investytsii/ && slidev build slides-8.md --base /investytsii/8/ --out dist/8 && slidev build vibe/slides.md --base /investytsii/vibe/ --out ../dist/vibe && slidev build vibe/slides-8.md --base /investytsii/vibe/8/ --out ../dist/vibe/8",
+    "export": "slidev export",
+    "dev:8": "slidev slides-8.md --open",
+    "dev:vibe:8": "slidev vibe/slides-8.md --open"
   },
   "dependencies": {
     "@slidev/cli": "^53.1.0",
